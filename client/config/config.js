@@ -31,7 +31,7 @@ const plugins = [
               importWorkboxFrom: 'local',
             },
           }
-        : {},
+        : false,
       ...(!process.env.TEST && os.platform() === 'darwin'
         ? {
             dll: {
@@ -103,7 +103,7 @@ export default {
   manifest: {
     basePath: '/',
   },
-  publicPath: '/ui/',
+
   history: 'hash',
   chainWebpack: webpackPlugin,
 };

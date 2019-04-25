@@ -40,11 +40,7 @@ files.forEach(file => {
     })
     .catch(e => {
       didError = true;
-    })
-    .finally(() => {
-      if (didError) {
-        process.exit(1);
-      }
+      process.exit(1);
       console.log(chalk.hex('#1890FF')('prettier success!'));
     });
 });
